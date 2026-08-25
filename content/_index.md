@@ -334,7 +334,7 @@ sections:
           image: teams-collaboration.jpg
           button:
             text: Book a demo
-            url: "#pricing"
+            url: "contact/"
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
