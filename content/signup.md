@@ -96,17 +96,6 @@ url: /signup/
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="job_role" autocomplete="organization-title">
       </label>
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
-        Company size
-        <select class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" name="company_size">
-          <option value="">Select company size</option>
-          <option value="1-10">1-10 employees</option>
-          <option value="11-50">11-50 employees</option>
-          <option value="51-200">51-200 employees</option>
-          <option value="201-500">201-500 employees</option>
-          <option value="501+">501+ employees</option>
-        </select>
-      </label>
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
         Password
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="password" name="password" minlength="6" required autocomplete="new-password">
       </label>
@@ -144,7 +133,6 @@ url: /signup/
           phone_country: formData.get('phone_country'),
           phone_number: formData.get('phone_number'),
           job_role: formData.get('job_role'),
-          company_size: formData.get('company_size'),
           plan
         }
       }
