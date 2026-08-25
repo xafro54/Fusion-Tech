@@ -75,6 +75,9 @@ taxonomies:
   author: authors
 markup:
   _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     lineNos: false
 security:
