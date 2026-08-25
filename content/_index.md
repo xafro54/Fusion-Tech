@@ -239,7 +239,7 @@ sections:
           highlight: false
           cta:
             text: Get started free
-            url: "https://beacon.example.com/start"
+            url: "signup/?plan=starter"
             icon: hero/arrow-right
             style: outline
           features:
@@ -266,7 +266,7 @@ sections:
           highlight: true
           cta:
             text: Start free trial
-            url: "https://beacon.example.com/start?plan=team"
+            url: "signup/?plan=team"
             icon: hero/arrow-right
             style: primary
           features:
@@ -292,7 +292,7 @@ sections:
           highlight: false
           cta:
             text: Start free trial
-            url: "https://beacon.example.com/start?plan=business"
+            url: "signup/?plan=business"
             icon: hero/arrow-right
             style: outline
           features:
@@ -334,7 +334,7 @@ sections:
           image: teams-collaboration.jpg
           button:
             text: Book a demo
-            url: "https://beacon.example.com/demo"
+            url: "#pricing"
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
