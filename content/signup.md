@@ -9,14 +9,16 @@ url: /signup/
     <h1 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Create your account</h1>
     <p class="mb-6 text-gray-600 dark:text-gray-300">Start organizing your customer feedback today.</p>
     <form id="signup-form" class="space-y-4">
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
-        Full name
-        <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="full_name" required autocomplete="name">
-      </label>
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
-        Company name
-        <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="company_name" required autocomplete="organization">
-      </label>
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+          First name
+          <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="first_name" required autocomplete="given-name">
+        </label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+          Last name
+          <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="last_name" required autocomplete="family-name">
+        </label>
+      </div>
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
         Email
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="email" name="email" required autocomplete="email">
@@ -92,6 +94,10 @@ url: /signup/
         </div>
       </fieldset>
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+        Company name
+        <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="company_name" required autocomplete="organization">
+      </label>
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
         Job role
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="job_role" autocomplete="organization-title">
       </label>
@@ -128,7 +134,8 @@ url: /signup/
       password: formData.get('password'),
       options: {
         data: {
-          full_name: formData.get('full_name'),
+          first_name: formData.get('first_name'),
+          last_name: formData.get('last_name'),
           company_name: formData.get('company_name'),
           phone_country: formData.get('phone_country'),
           phone_number: formData.get('phone_number'),
