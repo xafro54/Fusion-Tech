@@ -21,10 +21,76 @@ url: /signup/
         Email
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="email" name="email" required autocomplete="email">
       </label>
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
-        Phone number
-        <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="tel" name="phone" autocomplete="tel">
-      </label>
+      <fieldset class="space-y-2">
+        <legend class="block text-sm font-medium text-gray-700 dark:text-gray-200">Phone number</legend>
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+          <select class="block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" name="phone_country" autocomplete="tel-country-code" required>
+            <option value="">Country code</option>
+            <optgroup label="Africa">
+              <option value="+DZ">Algeria (+213)</option>
+              <option value="+AO">Angola (+244)</option>
+              <option value="+BJ">Benin (+229)</option>
+              <option value="+BW">Botswana (+267)</option>
+              <option value="+CM">Cameroon (+237)</option>
+              <option value="+CI">Cote d'Ivoire (+225)</option>
+              <option value="+EG">Egypt (+20)</option>
+              <option value="+ET">Ethiopia (+251)</option>
+              <option value="+GH">Ghana (+233)</option>
+              <option value="+KE">Kenya (+254)</option>
+              <option value="+MA">Morocco (+212)</option>
+              <option value="+MZ">Mozambique (+258)</option>
+              <option value="+NG">Nigeria (+234)</option>
+              <option value="+RW">Rwanda (+250)</option>
+              <option value="+SN">Senegal (+221)</option>
+              <option value="+ZA">South Africa (+27)</option>
+              <option value="+TZ">Tanzania (+255)</option>
+              <option value="+TN">Tunisia (+216)</option>
+              <option value="+UG">Uganda (+256)</option>
+              <option value="+ZM">Zambia (+260)</option>
+              <option value="+ZW">Zimbabwe (+263)</option>
+            </optgroup>
+            <optgroup label="Americas">
+              <option value="+AR">Argentina (+54)</option>
+              <option value="+BR">Brazil (+55)</option>
+              <option value="+CA">Canada (+1)</option>
+              <option value="+MX">Mexico (+52)</option>
+              <option value="+US">United States (+1)</option>
+            </optgroup>
+            <optgroup label="Asia">
+              <option value="+CN">China (+86)</option>
+              <option value="+IN">India (+91)</option>
+              <option value="+ID">Indonesia (+62)</option>
+              <option value="+JP">Japan (+81)</option>
+              <option value="+MY">Malaysia (+60)</option>
+              <option value="+PH">Philippines (+63)</option>
+              <option value="+SG">Singapore (+65)</option>
+              <option value="+KR">South Korea (+82)</option>
+              <option value="+TH">Thailand (+66)</option>
+              <option value="+AE">United Arab Emirates (+971)</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="+AT">Austria (+43)</option>
+              <option value="+BE">Belgium (+32)</option>
+              <option value="+FR">France (+33)</option>
+              <option value="+DE">Germany (+49)</option>
+              <option value="+IE">Ireland (+353)</option>
+              <option value="+IT">Italy (+39)</option>
+              <option value="+NL">Netherlands (+31)</option>
+              <option value="+PT">Portugal (+351)</option>
+              <option value="+ES">Spain (+34)</option>
+              <option value="+SE">Sweden (+46)</option>
+              <option value="+CH">Switzerland (+41)</option>
+              <option value="+GB">United Kingdom (+44)</option>
+            </optgroup>
+            <optgroup label="Oceania">
+              <option value="+AU">Australia (+61)</option>
+              <option value="+FJ">Fiji (+679)</option>
+              <option value="+NZ">New Zealand (+64)</option>
+            </optgroup>
+          </select>
+          <input class="block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="tel" name="phone_number" placeholder="Phone number" autocomplete="tel-national" required>
+        </div>
+      </fieldset>
       <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
         Job role
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="job_role" autocomplete="organization-title">
@@ -75,7 +141,8 @@ url: /signup/
         data: {
           full_name: formData.get('full_name'),
           company_name: formData.get('company_name'),
-          phone: formData.get('phone'),
+          phone_country: formData.get('phone_country'),
+          phone_number: formData.get('phone_number'),
           job_role: formData.get('job_role'),
           company_size: formData.get('company_size'),
           plan
