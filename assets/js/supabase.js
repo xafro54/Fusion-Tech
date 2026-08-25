@@ -9,3 +9,5 @@ if (supabaseUrl && supabaseAnonKey) {
 } else {
   console.warn('Supabase is not configured. Set HUGO_SUPABASE_URL and HUGO_SUPABASE_ANON_KEY.')
 }
+
+window.supabaseReady = Promise.resolve(window.supabaseClient)

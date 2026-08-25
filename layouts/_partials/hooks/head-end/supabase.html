@@ -4,3 +4,9 @@
 {{- with resources.Get "js/supabase.js" }}
   <script type="module" src="{{ .RelPermalink }}"></script>
 {{- end }}
+{{- with resources.Get "js/signup.js" }}
+  <script type="module" src="{{ .RelPermalink }}"></script>
+{{- end }}
+{{- with resources.Get "js/contact.js" }}
+  <script type="module" src="{{ .RelPermalink }}"></script>
+{{- end }}
