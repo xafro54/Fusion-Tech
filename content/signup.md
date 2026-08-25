@@ -8,7 +8,7 @@ url: /signup/
     <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-primary-600">Beacon</p>
     <h1 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Create your account</h1>
     <p class="mb-6 text-gray-600 dark:text-gray-300">Start organizing your customer feedback today.</p>
-    <form id="signup-form" class="space-y-4">
+    <form id="signup-form" data-form-version="2" class="space-y-4">
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
           First name
