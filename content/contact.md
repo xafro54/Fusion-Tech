@@ -1,6 +1,7 @@
 ---
 title: "Contact Beacon"
 url: /contact/
+lastmod: 2026-08-25
 ---
 
 <main class="mx-auto flex min-h-[70vh] max-w-md items-center justify-center px-6 py-16">
