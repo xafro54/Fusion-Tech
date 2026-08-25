@@ -1,0 +1,7 @@
+{{- $supabaseURL := getenv "HUGO_SUPABASE_URL" | default site.Params.supabase.url -}}
+{{- $supabaseAnonKey := getenv "HUGO_SUPABASE_ANON_KEY" | default site.Params.supabase.anon_key -}}
+<div id="supabase-config" data-supabase-url="{{ $supabaseURL }}" data-supabase-anon-key="{{ $supabaseAnonKey }}" hidden></div>
+{{- with resources.Get "js/supabase.js" }}
+  {{- $script := . | js.Build | minify | fingerprint "sha512" }}
+  <script type="module" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}

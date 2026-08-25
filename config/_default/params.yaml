@@ -7,6 +7,11 @@
 hugoblox:
   schema: "2.0"
 
+supabase:
+  # These public values can be set through HUGO_SUPABASE_URL and HUGO_SUPABASE_ANON_KEY.
+  url: ""
+  anon_key: ""
+
   # ────────────────────────────────────────────────────────────────────────────
   # IDENTITY
   # Site-level branding (for people/profiles, use the author system in content/authors/)
