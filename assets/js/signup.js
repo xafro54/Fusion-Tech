@@ -18,7 +18,7 @@ if (form) {
     }
 
     const formData = new FormData(form)
-    const { error } = await supabaseClient.auth.signUp({
+    const { data: authData, error } = await supabaseClient.auth.signUp({
       email: formData.get('email'),
       password: formData.get('password'),
       options: {
@@ -36,6 +36,24 @@ if (form) {
 
     if (error) {
       status.textContent = error.message
+      status.className = 'text-sm text-red-600'
+      return
+    }
+
+    const { error: submissionError } = await supabaseClient.from('signup_submissions').insert({
+      auth_user_id: authData.user?.id || null,
+      first_name: formData.get('first_name'),
+      last_name: formData.get('last_name'),
+      email: formData.get('email'),
+      company_name: formData.get('company_name'),
+      phone_country: formData.get('phone_country'),
+      phone_number: formData.get('phone_number'),
+      job_role: formData.get('job_role'),
+      plan
+    })
+
+    if (submissionError) {
+      status.textContent = `Account created, but signup details were not saved: ${submissionError.message}`
       status.className = 'text-sm text-red-600'
       return
     }
