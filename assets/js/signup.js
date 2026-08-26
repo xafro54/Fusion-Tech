@@ -51,6 +51,7 @@ if (form) {
       company_name: formData.get('company_name'),
       phone_country: formData.get('phone_country'),
       phone_number: formData.get('phone_number'),
+      phone: `${formData.get('phone_country')}${formData.get('phone_number')}`,
       job_role: formData.get('job_role'),
       plan
     })
