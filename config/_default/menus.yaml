@@ -18,6 +18,9 @@ main:
   - name: FAQ
     url: /#faq
     weight: 35
+  - name: Login
+    url: /login/
+    weight: 38
   - name: Resources
     weight: 40
     hasChildren: true

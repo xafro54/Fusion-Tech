@@ -116,9 +116,9 @@ supabase:
     language_switcher: true
     # Call-to-action button
     cta:
-      enable: false
-      text: ""
-      url: ""
+      enable: true
+      text: "Login"
+      url: "/login/"
 
   # ────────────────────────────────────────────────────────────────────────────
   # FOOTER

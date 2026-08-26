@@ -101,10 +101,7 @@ url: /signup/
         Job role
         <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="text" name="job_role" autocomplete="organization-title">
       </label>
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
-        Password
-        <input class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-900" type="password" name="password" minlength="6" required autocomplete="new-password">
-      </label>
+      <p class="text-sm text-gray-600 dark:text-gray-300">After you confirm your email, you will set your password.</p>
       <p id="signup-plan" class="text-sm text-gray-600 dark:text-gray-300"></p>
       <button class="w-full rounded-lg bg-primary-600 px-4 py-2 font-semibold text-white hover:bg-primary-700" type="submit">Create account</button>
       <p id="signup-status" class="text-sm" role="status" aria-live="polite"></p>

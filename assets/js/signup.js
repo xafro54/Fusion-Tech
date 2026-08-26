@@ -18,10 +18,11 @@ if (form) {
     }
 
     const formData = new FormData(form)
-    const redirectTo = `${window.location.origin}${window.location.pathname.replace(/signup\/$/, 'dashboard/')}`
+    const redirectTo = `${window.location.origin}${window.location.pathname.replace(/signup\/$/, 'reset-password/')}`
+    const temporaryPassword = `${crypto.randomUUID()}!Aa1`
     const { data: authData, error } = await supabaseClient.auth.signUp({
       email: formData.get('email'),
-      password: formData.get('password'),
+      password: temporaryPassword,
       options: {
         emailRedirectTo: redirectTo,
         data: {
