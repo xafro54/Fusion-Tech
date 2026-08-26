@@ -18,7 +18,7 @@ if (form) {
     }
 
     const formData = new FormData(form)
-    const redirectTo = `${window.location.origin}${window.location.pathname.replace(/signup\/$/, 'reset-password/')}`
+    const redirectTo = 'https://xafro54.github.io/Fusion-Tech/reset-password/'
     const temporaryPassword = `${crypto.randomUUID()}!Aa1`
     const { data: authData, error } = await supabaseClient.auth.signUp({
       email: formData.get('email'),
